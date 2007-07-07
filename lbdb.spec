@@ -1,5 +1,5 @@
 %define name    lbdb
-%define version 0.31.1
+%define version 0.35.1
 %define release %mkrel 1
 
 Summary:    The Little Brother's Database
