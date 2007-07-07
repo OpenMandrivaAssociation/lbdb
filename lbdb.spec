@@ -142,6 +142,8 @@ rm -rf %buildroot
 %{_libdir}/m_pine
 %{_libdir}/m_wanderlust
 %{_libdir}/qpto8bit
+%{_libdir}/m_vcf
+%{_libdir}/vcquery
 %{_mandir}/man1/lbdb-fetchaddr.1.*
 %{_mandir}/man1/lbdbq.1.*
 %{_mandir}/man1/lbdb_dotlock.1.*
