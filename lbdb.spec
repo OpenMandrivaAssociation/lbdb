@@ -10,7 +10,6 @@ Source0:    http://www.spinnaker.de/debian/%{name}_%{version}.tar.bz2
 License:  GPL
 Group:      Databases
 URL:        http://www.spinnaker.de/lbdb/
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:   mawk
 # need these so that all the modules get built
 BuildRequires: abook yp-tools finger gnupg perl libvformat-devel
