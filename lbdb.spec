@@ -1,21 +1,21 @@
 %define name    lbdb
-%define version 0.35.1
-%define release %mkrel 4
+%define version 0.36
+%define release %mkrel 1
 
-Summary:    The Little Brother's Database
-Name:       %{name}
-Version:    %{version}
-Release:    %{release}
-Source0:    http://www.spinnaker.de/debian/%{name}_%{version}.tar.bz2
-License:  GPL
-Group:      Databases
-URL:        http://www.spinnaker.de/lbdb/
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires:   mawk
+Summary:	The Little Brother's Database
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Source0:	%{name}_%{version}.tar.gz
+License:	GPLv2
+Group:		Databases
+URL:		http://www.spinnaker.de/lbdb/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Requires:	mawk
 # need these so that all the modules get built
-BuildRequires: abook yp-tools finger gnupg perl libvformat-devel
-Obsoletes: %{name}-mutt
-Provides: %{name}-mutt
+BuildRequires:	abook yp-tools finger gnupg perl libvformat-devel
+Obsoletes:	%{name}-mutt
+Provides:	%{name}-mutt
 
 %description 
 This package was inspired by the Big Brother Database package
@@ -105,13 +105,10 @@ using the command ``ypcat passwd''.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
-
 %setup -q
 
 %build
-
-%configure
-
+%configure2_5x
 %make
 
 %install
@@ -125,7 +122,6 @@ rm -rf %buildroot
 %defattr(-,root,root)
 %{_bindir}/lbdb-fetchaddr
 %{_bindir}/lbdbq
-%{_bindir}/lbdb_dotlock
 %{_bindir}/nodelist2lbdb
 %{_libdir}/lbdb_bbdb_query.el
 %{_libdir}/lbdb_lib
@@ -146,7 +142,6 @@ rm -rf %buildroot
 %{_libdir}/vcquery
 %{_mandir}/man1/lbdb-fetchaddr.1.*
 %{_mandir}/man1/lbdbq.1.*
-%{_mandir}/man1/lbdb_dotlock.1.*
 %{_mandir}/man1/nodelist2lbdb.1.*
 %doc COPYING README TODO
 %config(noreplace) %{_sysconfdir}/lbdb.rc
