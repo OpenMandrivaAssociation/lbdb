@@ -9,7 +9,7 @@ Release:	%{release}
 Source0:	%{name}_%{version}.tar.gz
 License:	GPLv2
 Group:		Databases
-URL:		http://www.spinnaker.de/lbdb/
+URL:		https://www.spinnaker.de/lbdb/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	mawk
 # need these so that all the modules get built
