@@ -13,6 +13,11 @@ URL:		https://www.spinnaker.de/lbdb/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	mawk
 # need these so that all the modules get built
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	abook yp-tools finger gnupg perl libvformat-devel
 Obsoletes:	%{name}-mutt
 Provides:	%{name}-mutt
