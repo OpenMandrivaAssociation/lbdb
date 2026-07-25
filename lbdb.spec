@@ -1,6 +1,6 @@
 %define name    lbdb
 %define version 0.36
-%define release %mkrel 2
+%define release 3
 
 Summary:	The Little Brother's Database
 Name:		%{name}
